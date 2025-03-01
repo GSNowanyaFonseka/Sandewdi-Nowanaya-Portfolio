@@ -1,0 +1,253 @@
+/* About Container Styling */
+.about-container {
+    margin: 0 auto;    
+    width: 100%;
+    min-height: 80vh; /* Changed from height to min-height for better content handling */
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+}
+
+/* About Text Styling */
+#about .about-text {
+    flex: 1;
+    color: #010613;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: auto 40px;
+    padding: 0;
+    text-align: justify;
+}
+
+/* About Image Styling */
+#about img {
+    max-width: 250px;
+    margin: 50px;
+    height: auto;
+    border-radius: 10px;
+    padding: 0;
+}
+
+/* Responsive Design - Large tablets and small laptops */
+@media (max-width: 1250px) {
+
+    #about{
+        padding-top: 0;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    #about img {
+        max-width: 300px;
+        margin: 20px auto;
+    }
+
+    #about .about-text {
+        flex: 1;
+        color: #010613;
+        font-size: 18px;
+        line-height: 1.6;
+        margin: auto 40px;
+        padding: 20px;
+        text-align: justify;
+    }
+
+}
+
+/* Tablets and smaller laptops */
+@media (max-width: 775px) {
+    #about{
+        padding-top: 0;
+    }
+
+    #about img {
+        max-width: 250px;
+        margin: 10px auto;
+    }
+
+    #about .about-text {
+        margin: auto 30px; /* Slightly reduced margin */
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    #about{
+        padding-top: 0;
+    }
+
+    .about-container {
+        min-height: auto; /* Allow container to adjust to content */
+        padding: 20px 0; /* Add some vertical padding */
+    }
+
+    #about img {
+        max-width: 150px;
+    }
+
+    #about .about-text {
+        font-size: 16px; /* Slightly smaller text for mobile */
+        margin: auto 20px; /* Reduced margin for mobile */
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 320px) {
+    #about{
+        padding-top: 0;
+    }
+    
+    #about img {
+        max-width: 120px;
+    }
+
+    #about .about-text {
+        font-size: 14px;
+        margin: auto 15px;
+    }
+}
+/* Add these new styles to your About.css */
+
+/* Section animation */
+#about {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+}
+
+#about.section-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Title animation */
+.slide-in {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideIn 0.8s ease forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Image container and floating animation */
+.image-container {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.8s ease-out;
+}
+
+.section-visible .image-container {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.floating {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Text content animations */
+.text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.animated-text {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all 0.8s ease-out;
+}
+
+.animated-text.text-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Add a subtle hover effect to the image */
+#about img {
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#about img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Gradient text highlight effect */
+.about-text {
+    background: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 100%
+    );
+    background-size: 200% 100%;
+    transition: background-position 0.8s ease;
+}
+
+.about-text:hover {
+    background-position: -100% 0;
+}
+
+/* Respect user preferences */
+@media (prefers-reduced-motion: reduce) {
+    #about,
+    .animated-text,
+    .floating,
+    .slide-in {
+        animation: none;
+        transition: none;
+        transform: none;
+    }
+}
+
+/* Keep your existing media queries and add these adjustments */
+@media (max-width: 1250px) {
+    .text-content {
+        text-align: center;
+    }
+    
+    .animated-text {
+        transform: translateY(30px);
+    }
+    
+    .animated-text.text-visible {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .floating {
+        animation: float 2s ease-in-out infinite;
+    }
+    
+    .animated-text {
+        transition: all 0.6s ease-out;
+    }
+}

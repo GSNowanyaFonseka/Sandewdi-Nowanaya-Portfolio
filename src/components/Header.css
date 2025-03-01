@@ -1,0 +1,279 @@
+.intro-text{
+    text-align: center;  
+    font-weight: 100; 
+    padding-bottom: 28px;
+    line-height: 35px;
+}
+
+#name{
+    font-size: 40px;
+    text-align: center;
+    padding: 35px;
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    color: rgba(34, 127, 169, 0.885);
+}
+
+.bottom-navigation {
+    top: 20px;
+    left: 0;
+    right: 0;
+    background-color: var(--white-color);
+    width: 50%;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2); /* Add box-shadow opacity */
+    border-radius: 4rem;
+    padding: 10px 0; /* Add padding for spacing */
+    margin: 0 auto; /* Center the bottom navigation on the page */
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center; /* Center the list items horizontally */
+    align-items: center;
+    list-style: none;
+    padding: 0; /* Remove extra padding */
+    margin: 0; /* Remove extra margin */
+}
+
+.fa-icon {
+    color:rgba(34, 127, 169, 0.885);
+    font-size: 25px;
+    transition: color .4s;
+    margin: 0 15px; /* Add space between the icons */
+}
+
+.fa-icon a:hover{
+    color: #c2f1e8;
+}
+
+.header-image {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px auto;
+}
+
+.header-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the container */
+}
+
+#header-section {
+    min-height: 90.5vh;
+    position: relative;
+    padding-bottom: 0px;
+}
+
+@media(max-width:780px){
+
+    #name{
+        line-height:45px;
+    }
+
+    .header-image {
+        width: 350px;
+        height: 350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .header-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures the image fills the container */
+    }
+
+}
+
+@media(max-width:650px){
+    .header-image {
+        width: 250px;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .header-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures the image fills the container */
+    }
+}
+
+@media(max-width:550px){
+    .header-image {
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .header-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures the image fills the container */
+    }
+}
+
+@media(max-width:450px){
+    .header-image {
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .header-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures the image fills the container */
+    }
+}
+
+/* Add these animations to your existing Header.css */
+
+/* Header content wrapper */
+.header-content {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.header-content.visible {
+    opacity: 1;
+}
+
+/* Fade in down animation */
+.fade-in-down {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInDown 0.8s ease forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade in up animation */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Basic fade in animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Modify your existing header-image class */
+.header-image {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px auto;
+    animation-delay: 0.6s; /* Add delay to image animation */
+}
+
+/* Add hover effects to social icons */
+.fa-icon {
+    color: rgba(34, 127, 169, 0.885);
+    font-size: 25px;
+    transition: all 0.4s ease;
+    margin: 0 15px;
+    transform: scale(1);
+}
+
+.fa-icon:hover {
+    color: #c2f1e8;
+    transform: scale(1.1);
+}
+
+/* Add shimmer effect to name */
+#name {
+    position: relative;
+    overflow: hidden;
+}
+
+#name::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    animation: shimmer 2s infinite;
+    animation-delay: 1s;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Responsive animations */
+@media (prefers-reduced-motion: reduce) {
+    .fade-in-down,
+    .fade-in-up,
+    .fade-in,
+    #name::after {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Add your existing media queries here */
+@media(max-width: 780px) {
+    /* Your existing mobile styles */
+    .header-image {
+        animation-delay: 0.4s; /* Slightly faster animation on mobile */
+    }
+}
+
+

@@ -1,0 +1,240 @@
+/* Base styles remain the same as provided */
+.skills-container {
+    margin: 0px auto;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+}
+
+.skill {
+    position: relative;
+    overflow: hidden;
+    height: auto;
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.layer1 img {
+    height: 300px;
+    width: auto;
+    margin: 10px;
+    display: block;
+    float: left;
+    padding: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.layer2 img {
+    height: 300px;
+    width: auto;
+    margin: 10px;
+    display: block;
+    float: right;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.layer3 img {
+    height: 250px;
+    width: auto;
+    margin: 10px;
+    display: block;
+    float: left;
+    padding: 20px 0px 20px 0px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.skill:hover .layer img {
+    transform: scale(1.05);
+}
+
+.skill h1 {
+    text-align: center;
+    color: rgb(68, 121, 196);
+    padding: 10px 0 0 0;
+}
+
+.skills-desc {
+    text-align: center;
+    margin-top: 70px;
+    padding: 0 30px 0 30px;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.skill-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.animated-image {
+    height: 70px;
+    width: auto;
+    animation: waddle 2s infinite ease-in-out;
+    padding: 10px;
+    transition: transform 0.3s;
+}
+
+.animated-image:hover {
+    transform: rotate(10deg) scale(1.1);
+}
+
+@keyframes waddle {
+    0%, 100% {
+        transform: translateX(-10px) rotate(-5deg);
+    }
+    50% {
+        transform: translateX(10px) rotate(5deg);
+    }
+}
+
+/* Large devices (laptops/desktops, 1200px and down) */
+@media screen and (max-width: 1000px) {
+    .layer1 img,
+    .layer2 img {
+        height: 250px;
+    }
+    
+    .layer3 img {
+        height: 200px;
+    }
+    
+    .skills-desc {
+        margin-top: 50px;
+    }
+}
+
+/* Medium devices (tablets, 992px and down) */
+@media screen and (max-width: 1030px) {
+    .skills-container {
+        padding: 10px;
+    }
+    
+    .layer1 img,
+    .layer2 img {
+        height: 200px;
+        padding: 15px;
+    }
+    
+    .layer3 img {
+        height: 180px;
+        padding: 15px;
+    }
+    
+    .skills-desc {
+        margin-top: 40px;
+        padding: 0 20px;
+    }
+    
+    .skill-content {
+        gap: 15px;
+    }
+    
+    .animated-image {
+        height: 60px;
+    }
+}
+
+/* Small devices (landscape tablets, 768px and down) */
+@media screen and (max-width: 768px) {
+    .layer1 img,
+    .layer2 img,
+    .layer3 img {
+        height: 180px;
+        float: none;
+        margin: 10px auto;
+        display: block;
+    }
+    
+    .skills-desc {
+        margin-top: 30px;
+        font-size: 14px;
+    }
+    
+    .skill h1 {
+        font-size: 1.5rem;
+    }
+    
+    .animated-image {
+        height: 50px;
+    }
+    
+    .skill-content {
+        flex-wrap: wrap;
+    }
+}
+
+/* Extra small devices (phones, 576px and down) */
+@media screen and (max-width: 576px) {
+    .skills-container {
+        padding: 10px;
+    }
+    
+    .skill {
+        padding: 15px;
+    }
+    
+    .layer1 img,
+    .layer2 img,
+    .layer3 img {
+        height: 150px;
+        padding: 10px;
+    }
+    
+    .skills-desc {
+        margin-top: 20px;
+        padding: 0 15px;
+        font-size: 13px;
+    }
+    
+    .animated-image {
+        height: 40px;
+    }
+    
+    .skill:hover {
+        transform: translateY(-5px);
+    }
+}
+
+/* Very small devices (small phones, 400px and down) */
+@media screen and (max-width: 400px) {
+    .layer1 img,
+    .layer2 img,
+    .layer3 img {
+        height: 120px;
+        padding: 5px;
+    }
+    
+    .skills-desc {
+        padding: 0 10px;
+        font-size: 12px;
+    }
+    
+    .animated-image {
+        height: 35px;
+        padding: 5px;
+    }
+    
+    .skill-content {
+        gap: 10px;
+    }
+}
