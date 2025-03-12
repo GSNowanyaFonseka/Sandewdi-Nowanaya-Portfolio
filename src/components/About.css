@@ -30,86 +30,7 @@
     padding: 0;
 }
 
-/* Responsive Design - Large tablets and small laptops */
-@media (max-width: 1250px) {
 
-    #about{
-        padding-top: 0;
-    }
-
-    .about-container {
-        flex-direction: column;
-    }
-
-    #about img {
-        max-width: 300px;
-        margin: 20px auto;
-    }
-
-    #about .about-text {
-        flex: 1;
-        color: #010613;
-        font-size: 18px;
-        line-height: 1.6;
-        margin: auto 40px;
-        padding: 20px;
-        text-align: justify;
-    }
-
-}
-
-/* Tablets and smaller laptops */
-@media (max-width: 775px) {
-    #about{
-        padding-top: 0;
-    }
-
-    #about img {
-        max-width: 250px;
-        margin: 10px auto;
-    }
-
-    #about .about-text {
-        margin: auto 30px; /* Slightly reduced margin */
-    }
-}
-
-/* Mobile devices */
-@media (max-width: 480px) {
-    #about{
-        padding-top: 0;
-    }
-
-    .about-container {
-        min-height: auto; /* Allow container to adjust to content */
-        padding: 20px 0; /* Add some vertical padding */
-    }
-
-    #about img {
-        max-width: 150px;
-    }
-
-    #about .about-text {
-        font-size: 16px; /* Slightly smaller text for mobile */
-        margin: auto 20px; /* Reduced margin for mobile */
-    }
-}
-
-/* Small mobile devices */
-@media (max-width: 320px) {
-    #about{
-        padding-top: 0;
-    }
-    
-    #about img {
-        max-width: 120px;
-    }
-
-    #about .about-text {
-        font-size: 14px;
-        margin: auto 15px;
-    }
-}
 /* Add these new styles to your About.css */
 
 /* Section animation */
@@ -227,27 +148,267 @@
     }
 }
 
-/* Keep your existing media queries and add these adjustments */
-@media (max-width: 1250px) {
-    .text-content {
-        text-align: center;
+/* Original styles remain unchanged */
+
+/* Image handling to place it before text */
+.image-container {
+    order: -1; /* Ensures image comes before text in flex layouts */
+}
+
+/* Comprehensive Media Queries for all screen sizes */
+
+/* Extra large screens */
+@media screen and (min-width: 1601px) {
+    .about-container {
+        max-width: 1400px;
+        padding: 0 50px;
     }
     
-    .animated-text {
-        transform: translateY(30px);
-    }
-    
-    .animated-text.text-visible {
-        transform: translateY(0);
+    #about img {
+        max-width: 300px;
     }
 }
 
-@media (max-width: 480px) {
-    .floating {
-        animation: float 2s ease-in-out infinite;
+/* Large desktop screens: 1201px-1600px */
+@media screen and (min-width: 1201px) and (max-width: 1600px) {
+    .about-container {
+        padding: 0 30px;
+    }
+}
+
+/* Standard desktop screens: 992px-1200px */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    #about img {
+        max-width: 220px;
+        margin: 40px;
     }
     
-    .animated-text {
-        transition: all 0.6s ease-out;
+    #about .about-text {
+        margin: auto 30px;
+    }
+}
+
+/* Small desktop / Large tablets: 768px-991px */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .about-container {
+        padding: 20px 0;
+    }
+    
+    #about img {
+        max-width: 200px;
+        margin: 30px;
+    }
+    
+    #about .about-text {
+        font-size: 17px;
+        margin: auto 25px;
+    }
+}
+
+/* Tablets: 601px-767px */
+@media screen and (min-width: 601px) and (max-width: 767px) {
+    .about-container {
+        flex-direction: column;
+        min-height: auto;
+        padding: 20px 0;
+    }
+    
+    .image-container {
+        margin-bottom: 20px;
+    }
+    
+    #about img {
+        max-width: 180px;
+        margin: 20px auto;
+    }
+    
+    #about .about-text {
+        font-size: 16px;
+        margin: 15px 30px;
+        text-align: center;
+    }
+    
+    .text-content {
+        align-items: center;
+    }
+}
+
+/* Large phones: 481px-600px */
+@media screen and (min-width: 481px) and (max-width: 600px) {
+    .about-container {
+        flex-direction: column;
+        min-height: auto;
+        padding: 15px 0;
+    }
+    
+    .image-container {
+        margin-bottom: 15px;
+    }
+    
+    #about img {
+        max-width: 170px;
+        margin: 15px auto;
+    }
+    
+    #about .about-text {
+        font-size: 16px;
+        margin: 10px 25px;
+        text-align: left;
+    }
+}
+
+/* Medium phones including iPhone XR: 375px-480px */
+@media screen and (min-width: 375px) and (max-width: 480px) {
+    .about-container {
+        flex-direction: column !important;
+        min-height: auto !important;
+        padding: 15px 5px !important;
+    }
+    
+    .image-container {
+        margin: 0 auto 15px auto !important;
+    }
+    
+    #about img {
+        max-width: 150px !important;
+        margin: 10px auto !important;
+        display: block !important;
+    }
+    
+    #about .about-text, 
+    .about-text {
+        font-size: 15px !important;
+        margin: 8px 20px !important;
+        padding: 0 !important;
+        text-align: left !important;
+    }
+    
+    .text-content {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+    
+    #about h1.title {
+        font-size: 24px !important;
+        text-align: center !important;
+        margin-bottom: 10px !important;
+    }
+}
+
+/* Small phones: below 375px */
+@media screen and (max-width: 374px) {
+    .about-container {
+        flex-direction: column !important;
+        min-height: auto !important;
+        padding: 10px 5px !important;
+    }
+    
+    .image-container {
+        margin: 0 auto 10px auto !important;
+    }
+    
+    #about img {
+        max-width: 130px !important;
+        margin: 8px auto !important;
+    }
+    
+    #about .about-text, 
+    .about-text {
+        font-size: 14px !important;
+        margin: 5px 15px !important;
+        line-height: 1.5 !important;
+    }
+    
+    #about h1.title {
+        font-size: 22px !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .floating {
+        animation-duration: 2s !important;
+    }
+}
+
+/* Device-specific fixes */
+
+/* iPhone XR/11/12/13 (414px width) */
+@media screen and (width: 414px) {
+    #about img {
+        max-width: 140px !important;
+    }
+}
+
+/* iPhone SE / smaller devices */
+@media screen and (max-width: 320px) {
+    #about img {
+        max-width: 110px !important;
+    }
+    
+    #about .about-text {
+        font-size: 13px !important;
+        margin: 5px 12px !important;
+    }
+}
+
+/* Landscape orientation adjustments */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .about-container {
+        flex-direction: row !important;
+        align-items: center !important;
+        padding: 10px !important;
+    }
+    
+    #about img {
+        max-width: 120px !important;
+        margin: 10px !important;
+    }
+    
+    .text-content {
+        gap: 0.5rem !important;
+    }
+    
+    #about .about-text {
+        font-size: 14px !important;
+        margin: 5px 15px !important;
+    }
+    
+    .image-container {
+        margin: 0 !important;
+    }
+}
+
+/* Specific for high-DPI screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    #about img {
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    }
+}
+
+/* Print styles */
+@media print {
+    .about-container {
+        display: block !important;
+        min-height: auto !important;
+    }
+    
+    #about {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+    
+    .animated-text, .image-container {
+        
+        opacity: 1 !important;
+        transform: none !important;
+    }
+    
+    #about img {
+        max-width: 200px !important;
+        margin: 20px auto !important;
+        display: block !important;
+    }
+    
+    .floating, .slide-in {
+        animation: none !important;
     }
 }

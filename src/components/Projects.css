@@ -124,4 +124,510 @@
   width: 100%;
 }
 
+/* Container for the entire Projects section */
+.project-container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1400px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;  /* Stack each project vertically */
+  gap: 30px;
+  padding: 20px;
+  justify-items: center;
+}
 
+/* Each Project row */
+.project {
+  display: flex;           /* Image and content side by side */
+  align-items: center;
+  gap: 20px;               /* Space between image and text */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgb(21, 21, 110);
+}
+
+.project:last-child{
+  border-bottom: none;
+}
+
+.button p{
+  color: white;
+}
+
+/* Keep your existing text color, size, etc. */
+.project-content h1 {
+  color: #1a365d;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  text-align: left;  /* changed from center to left */
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* You can keep the underline effect if you want */
+.project-content h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0; /* align the line to left */
+  width: 50px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+.project-content p {
+  color: black;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Updated Project Buttons */
+.project-buttons a {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 400px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease, transform 0.2s ease-in-out;
+}
+
+/* Primary Button */
+.project-buttons a{
+  background-color: #76bfdc; /* Green */
+  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Project Image Styling */
+.project img {
+  width: 200px; /* Smaller Image */
+  height: auto;
+  object-fit: cover;
+  transition: none; /* Removed hover scale effect */
+}
+
+/* Adjust the content on the right side */
+.project-content h1 {
+  font-size: 1.2rem; /* Slightly smaller title */
+  color: #333;
+}
+
+.project-content p {
+  font-size: 0.9rem; /* Smaller font size for paragraph */
+}
+
+/* Adjust project container */
+.project-container {
+  gap: 20px; /* Smaller gap between projects */
+  padding: 15px;
+}
+
+/* Ensure the buttons container is flex and aligned */
+.project-buttons {
+  display: flex;
+  gap: 10px;  /* Space between buttons */
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Align buttons to the left */
+  margin-top: 10px; /* Add space between text and buttons */
+}
+
+/* Ensure each project content section is properly spaced */
+.project-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start; /* Align text and buttons to the left */
+  width: 100%;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Extra large screens (>1600px) */
+@media screen and (min-width: 1601px) {
+  .project-container {
+      max-width: 1600px;
+      padding: 30px;
+      gap: 40px;
+  }
+  
+  .project {
+      max-width: 1400px;
+      gap: 30px;
+      padding-bottom: 30px;
+  }
+  
+  .project img {
+      width: 250px;
+  }
+  
+  .project-content h1 {
+      font-size: 1.8rem;
+  }
+  
+  .project-content p {
+      font-size: 1.1rem;
+  }
+  
+  .project-buttons a {
+      padding: 12px 24px;
+      font-size: 1rem;
+  }
+}
+
+/* Large desktop screens (1201px-1600px) */
+@media screen and (min-width: 1201px) and (max-width: 1600px) {
+  .project-container {
+      padding: 25px;
+  }
+  
+  .project {
+      gap: 25px;
+  }
+  
+  .project img {
+      width: 220px;
+  }
+}
+
+/* Standard desktop screens (992px-1200px) */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .project-container {
+      max-width: 960px;
+      padding: 20px;
+  }
+  
+  .project {
+      gap: 20px;
+  }
+  
+  .project img {
+      width: 180px;
+  }
+  
+  .project-content h1 {
+      font-size: 1.3rem;
+  }
+}
+
+/* Small desktop / Large tablets (768px-991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .project-container {
+      max-width: 740px;
+      padding: 15px;
+      gap: 25px;
+  }
+  
+  .project {
+      gap: 15px;
+      padding-bottom: 25px;
+  }
+  
+  .project img {
+      width: 160px;
+  }
+  
+  .project-content h1 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+  }
+  
+  .project-content p {
+      font-size: 0.9rem;
+  }
+  
+  .project-buttons a {
+      padding: 8px 16px;
+      font-size: 0.85rem;
+  }
+}
+
+/* Tablets (601px-767px) */
+@media screen and (min-width: 601px) and (max-width: 767px) {
+  .project-container {
+      padding: 15px;
+      gap: 20px;
+  }
+  
+  .project {
+      flex-direction: column;
+      text-align: center;
+      gap: 15px;
+      padding-bottom: 20px;
+  }
+  
+  .project img {
+      width: 220px;
+  }
+  
+  .project-content {
+      align-items: center;
+  }
+  
+  .project-content h1 {
+      text-align: center;
+      font-size: 1.3rem;
+  }
+  
+  .project-content h1::after {
+      left: 50%;
+      transform: translateX(-50%);
+  }
+  
+  .project-buttons {
+      justify-content: center;
+  }
+}
+
+/* Large phones (481px-600px) */
+@media screen and (min-width: 481px) and (max-width: 600px) {
+  .project-container {
+      padding: 12px;
+      gap: 18px;
+  }
+  
+  .project {
+      flex-direction: column;
+      text-align: center;
+      padding-bottom: 18px;
+      gap: 12px;
+  }
+  
+  .project img {
+      width: 200px;
+  }
+  
+  .project-content {
+      align-items: center;
+  }
+  
+  .project-content h1 {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+  }
+  
+  .project-content h1::after {
+      left: 50%;
+      transform: translateX(-50%);
+  }
+  
+  .project-content p {
+      font-size: 0.85rem;
+      text-align: center;
+  }
+  
+  .project-buttons {
+      justify-content: center;
+  }
+  
+  .project-buttons a {
+      padding: 8px 14px;
+      font-size: 0.8rem;
+  }
+}
+
+/* Medium phones (375px-480px) */
+@media screen and (min-width: 375px) and (max-width: 480px) {
+  .project-container {
+      padding: 10px;
+      gap: 15px;
+  }
+  
+  .project {
+      flex-direction: column;
+      text-align: center;
+      padding-bottom: 15px;
+      gap: 10px;
+      border-bottom: 1px solid rgb(21, 21, 110);
+  }
+  
+  .project img {
+      width: 180px;
+  }
+  
+  .project-content {
+      align-items: center;
+  }
+  
+  .project-content h1 {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+  }
+  
+  .project-content h1::after {
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+  }
+  
+  .project-content p {
+      font-size: 0.8rem;
+      text-align: center;
+  }
+  
+  .project-buttons {
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+  }
+  
+  .project-buttons a {
+      padding: 8px 12px;
+      font-size: 0.8rem;
+      justify-content: center;
+      width: 100%;
+      margin-top: 5px;
+  }
+}
+
+/* Small phones (<375px) */
+@media screen and (max-width: 374px) {
+  .project-container {
+      padding: 8px;
+      gap: 12px;
+  }
+  
+  .project {
+      flex-direction: column;
+      text-align: center;
+      padding-bottom: 12px;
+      gap: 8px;
+      border-bottom: 1px solid rgb(21, 21, 110);
+  }
+  
+  .project img {
+      width: 150px;
+  }
+  
+  .project-content {
+      align-items: center;
+  }
+  
+  .project-content h1 {
+      text-align: center;
+      font-size: 1rem;
+      margin-bottom: 6px;
+  }
+  
+  .project-content h1::after {
+      left: 50%;
+      transform: translateX(-50%);
+      width: 30px;
+      height: 2px;
+  }
+  
+  .project-content p {
+      font-size: 0.75rem;
+      text-align: center;
+      line-height: 1.4;
+  }
+  
+  .project-buttons {
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+  }
+  
+  .project-buttons a {
+      padding: 6px 10px;
+      font-size: 0.75rem;
+      justify-content: center;
+      width: 100%;
+      margin-top: 5px;
+  }
+}
+
+/* Landscape orientation for phones */
+@media screen and (max-height: 450px) and (orientation: landscape) {
+  .project-container {
+      padding: 10px;
+  }
+  
+  .project {
+      flex-direction: row;
+      gap: 15px;
+      padding-bottom: 15px;
+  }
+  
+  .project img {
+      width: 120px;
+  }
+  
+  .project-content h1 {
+      font-size: 1rem;
+      margin-bottom: 5px;
+  }
+  
+  .project-content p {
+      font-size: 0.8rem;
+      line-height: 1.3;
+  }
+  
+  .project-buttons {
+      flex-wrap: wrap;
+      gap: 5px;
+  }
+  
+  .project-buttons a {
+      padding: 5px 10px;
+      font-size: 0.75rem;
+  }
+}
+
+/* High-resolution displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .project img {
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Print styles */
+@media print {
+  .project-container {
+      padding: 0;
+      gap: 15px;
+  }
+  
+  .project {
+      break-inside: avoid;
+      page-break-inside: avoid;
+      border-bottom: 1px solid #888;
+      padding-bottom: 15px;
+  }
+  
+  .project img {
+      width: 150px;
+  }
+  
+  .project-buttons {
+      display: none; /* Hide buttons when printing */
+  }
+  
+  .project-content h1 {
+      color: black;
+      font-size: 14pt;
+  }
+  
+  .project-content p {
+      font-size: 10pt;
+      line-height: 1.4;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .project-buttons a {
+      transition: none;
+  }
+}
