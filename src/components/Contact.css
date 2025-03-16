@@ -111,6 +111,7 @@ textarea.input{
     overflow: auto;
     padding: 10px;
     margin-bottom: 15px; /* Reduced from 30px */
+    font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 .button{
@@ -176,7 +177,10 @@ textarea.input::-webkit-scrollbar-track {
     #contact-form {
         height: auto;
         padding: 20px 10px;
-        min-height: unset; /* Remove min-height constraint */
+        overflow: hidden;
+        min-height: unset; 
+        position: relative;
+        z-index: 1;
     }
     
     .item {
@@ -184,6 +188,7 @@ textarea.input::-webkit-scrollbar-track {
         height: auto;
         max-height: none;
         overflow: visible; /* Change from auto to visible */
+        z-index: 999;
     }
     
     .contact, .submit-form {
