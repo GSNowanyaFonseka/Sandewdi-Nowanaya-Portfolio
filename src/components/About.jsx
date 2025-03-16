@@ -50,7 +50,7 @@ const About = () => {
 
   return (
     <section id="about" ref={sectionRef}>
-      <h1 className="title slide-in">About Me</h1>
+      <h1 className="title">About Me</h1>
       <div className="about-container">
         <div className="image-container scale-in">
           <img src={aboutimage} alt="about" className="floating"/>

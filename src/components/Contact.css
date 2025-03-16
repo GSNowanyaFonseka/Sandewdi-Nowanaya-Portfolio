@@ -21,7 +21,7 @@
     background: white;
     border-radius: 20px;
     box-shadow: 0 0 20px 10px rgba(19, 50, 91, 0.793);
-    overflow: hidden;
+    overflow: hidden; /* Keeps the content within the container */
     grid-template-columns: repeat(2, 1fr);
     display: grid;
     z-index: 1000;
@@ -42,11 +42,15 @@
     flex-direction: column;
     justify-content: center;
     padding: 20px;
+    overflow-y: auto; /* Allow vertical scrolling if needed */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
 .submit-form{
-    background-color:  #4b7486;
+    background-color: #4b7486;
     padding: 20px;
+    overflow-y: auto; /* Allow vertical scrolling if needed */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
 .first-text{
@@ -67,7 +71,6 @@
     font-size: 15px;
 }
 
-
 .third-text{
     font-size: 25px;
     position: relative;
@@ -80,9 +83,9 @@
 form{
     margin-top: 50px;
     margin-bottom: 0;
-    height: 100%;
+    height: auto; /* Changed from 100% to auto to prevent overflow */
     width: 100%;
-    overflow: hidden;
+    overflow: visible; /* Changed from hidden to visible */
 }
 
 form input{
@@ -96,23 +99,24 @@ form input, form textarea{
     background: #f8f8f8;
     padding: 15px;
     margin: 15px 0;
-    color:rgb(29, 101, 123);
-    font-size:15px;
+    color: rgb(29, 101, 123);
+    font-size: 15px;
     border-radius: 20px;
+    box-sizing: border-box; /* Add this to include padding in width calculation */
 }
 
 textarea.input{
     resize: none;
-    height: 150px;
+    height: 120px; /* Reduced from 150px to reduce overflow */
     overflow: auto;
     padding: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 15px; /* Reduced from 30px */
 }
 
 .button{
-    display:inline-flex;
+    display: inline-flex;
     margin: 20px auto;
-    width:fit-content;
+    width: fit-content;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
@@ -122,14 +126,14 @@ textarea.input{
 }
 
 .submit{
-    display:inline-flex;
-    width:fit-content;
+    display: inline-flex;
+    width: fit-content;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
-    color:white;
-    border-color: rgb(29, 101, 123);
-    background-color:rgb(29, 101, 123);
+    color: white;
+    border: none; /* Changed from border-color to border */
+    background-color: rgb(29, 101, 123);
 }
 
 footer{
@@ -147,192 +151,122 @@ footer{
     font-size: 22px;
 }
 
-@media(max-width:850px){
-    .item{
+/* Custom scrollbar styling */
+.contact::-webkit-scrollbar,
+.submit-form::-webkit-scrollbar,
+textarea.input::-webkit-scrollbar {
+    width: 5px;
+}
+
+.contact::-webkit-scrollbar-thumb,
+.submit-form::-webkit-scrollbar-thumb,
+textarea.input::-webkit-scrollbar-thumb {
+    background: rgba(29, 101, 123, 0.3);
+    border-radius: 10px;
+}
+
+.contact::-webkit-scrollbar-track,
+.submit-form::-webkit-scrollbar-track,
+textarea.input::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Small screens */
+@media screen and (max-width: 768px) {
+    #contact-form {
+        height: auto;
+        padding: 20px 10px;
+        min-height: unset; /* Remove min-height constraint */
+    }
+    
+    .item {
         grid-template-columns: 1fr;
+        height: auto;
+        max-height: none;
+        overflow: visible; /* Change from auto to visible */
     }
-    .contact{
-        display: none;
+    
+    .contact, .submit-form {
+        padding: 20px;
+        overflow: visible; /* Change from auto to visible */
     }
-    .text{
-        font-size: 40px;
+    
+    .first-text {
+        font-size: 28px;
         text-align: center;
     }
-    .btn{
-        width: 25%;
-        height: 40px;
-        font-size: 12px;
+    
+    .image {
+        height: 180px;
+        width: 180px;
+        margin: 15px auto;
     }
-
-    .third-text{
-        font-size: 18px;
-        text-align: center;
-        padding-top: 10px;
-        color: rgb(255, 255, 255);
-    }
-
-    #contact-form{ 
-        padding: 10px;
-        margin: auto;
-        width: 100%;
-        height: 90vh;
-    }
-}
-
-@media(max-width:480px){
-
-    #contact-form{ 
-        padding: 10px;
-        margin: auto;
-        width: 100%;
-        height: 90vh;
-    }
-
-    .item{
-        grid-template-columns: 1fr;
-    }
-    .contact{
-        display: none;
-    }
-    .text{
-        font-size: 20px;
-        text-align: center;
-    }
-    .btn{
-        width: 20%;
-        height: 40px;
-        font-size: 12px;
-    }
-
-    .third-text{
-        font-size: 18px;
-        text-align: center;
-        padding-top: 10px;
-        color: rgb(255, 255, 255);
-    }
-
-}
-
-@media(max-width:350px){
-
-    #contact-form{ 
-        padding: 10px;
-        margin: auto;
-        width: 100%;
-        height: 90vh;
-    }
-
-    .item{
-        grid-template-columns: 1fr;
-    }
-    .contact{
-        display: none;
-    }
-    .text{
-        font-size: 20px;
-        text-align: center;
-    }
-    .btn{
-        width: 20%;
-        height: 40px;
-        font-size: 12px;
-    }
-
-    .third-text{
-        font-size: 18px;
-        text-align: center;
-        padding-top: 10px;
-        color: rgb(255, 255, 255);
-    }
-}
-
-.container {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    width: 100%;
-    max-width: 1200px;
-}
-
-hr {
-    width: 80%;
-    margin: 3% auto 3% auto; 
-    color: rgb(29, 101, 123);
-}
-
-
-@media (max-width: 768px) {
-
-    #contact-form{ 
-        padding: 10px;
-        margin: auto;
-        width: 100%;
-        height: 90vh;
-    }
-
-    .navbar .links {
-        display: none;
-    }
-
-    .navbar .toggle_btn {
-        display: block;
-    }
-
-    .dropdown-menu {
-        display: block;
-    }
-
-    .content {
-        margin-left: 0;
-        text-align: center;
-    }
-
-    #about, #education, #contact {
-        padding: 30px 0;
-    }
-
-    .projects {
-        width: 600px; /* Decrease width on medium screens */
-        height: auto; /* Adjust height */
-        flex-direction: column; /* Stack content vertically */
-    }
-
-    .layer {
-        flex-direction: column;
+    
+    .next p {
         justify-content: center;
-        align-items: center;
+        font-size: 14px;
+    }
+    
+    .next {
         text-align: center;
     }
-
-    .layer img {
-        width: 100px; /* Adjust image size */
+    
+    .button {
+        margin: 15px auto;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .third-text {
+        font-size: 22px;
+        top: 10px;
+    }
+    
+    form {
+        margin-top: 40px;
+    }
+    
+    textarea.input {
         height: 100px;
-        margin-bottom: 20px; /* Add margin below the image */
-    }
-
-    .project-buttons {
-        flex-direction: column; /* Stack buttons vertically */
-        gap: 10px;
-    }
-
-    .project-buttons a {
-        width: 100%; /* Make buttons full width */
-        max-width: 200px; /* Set max width */
-        margin: 0 auto; /* Center the buttons */
-    }
-
-    .third-text{
-        font-size: 18px;
-        text-align: center;
-        padding-top: 10px;
-        color: rgb(255, 255, 255);
     }
 }
 
-#msg{
-    color: rgb(29, 101, 123);  /* Change to black for better contrast */
-    margin-top: 20px;  /* Adjust the margin */
-    display: block;
-    font-size: 16px;  /* Make the message text more readable */
+/* Extra small devices */
+@media screen and (max-width: 480px) {
+    .item {
+        border-radius: 15px;
+    }
+    
+    .first-text {
+        font-size: 24px;
+    }
+    
+    .third-text {
+        font-size: 20px;
+    }
+    
+    .image {
+        height: 150px;
+        width: 150px;
+        margin: 10px auto;
+    }
+    
+    .next p {
+        font-size: 13px;
+    }
+    
+    .button, .submit {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+    
+    form input, form textarea {
+        padding: 12px;
+        margin: 10px 0;
+        font-size: 14px;
+    }
+    
+    textarea.input {
+        height: 80px;
+    }
 }

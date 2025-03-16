@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
     <section id="header-section">
-      <div className="header-content">
+      <div className="header-container">
         <h1 id="name" className="fade-in-down"> Sandewdi Nowanya </h1>
         <h1 className="intro-text fade-in-up">
           Computer Science  <br/> @ University of Westminster

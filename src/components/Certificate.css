@@ -114,9 +114,6 @@ img{
 } 
 
 @media screen and (max-width: 800px) {
-    .timeline-section{
-        margin-top: 20px;
-    }
     .timeline-items {
         margin-top: 70px;
     }

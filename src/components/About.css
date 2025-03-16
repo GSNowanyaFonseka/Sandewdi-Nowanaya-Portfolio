@@ -184,16 +184,12 @@
     }
     
     #about .about-text {
-        margin: auto 30px;
+        margin: auto;
     }
 }
 
 /* Small desktop / Large tablets: 768px-991px */
-@media screen and (min-width: 768px) and (max-width: 991px) {
-    .about-container {
-        padding: 20px 0;
-    }
-    
+@media screen and (min-width: 768px) and (max-width: 991px) {    
     #about img {
         max-width: 200px;
         margin: 30px;

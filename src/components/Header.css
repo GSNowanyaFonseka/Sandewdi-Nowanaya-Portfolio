@@ -66,9 +66,11 @@
 
 
 #header-section {
-    min-height: 90.5vh;
+    min-height: 100vh;
     position: relative;
+    padding: 20px 0;
     padding-bottom: 0px;
+    background-color: white;
 }
 
 /* Add these animations to your existing Header.css */
@@ -220,6 +222,13 @@
     #name {
         font-size: 28px;
         padding: 20px;
+    }
+
+    #header-section {
+        min-height: 80vh;
+        position: relative;
+        padding-bottom: 0px;
+        background-color: white;
     }
 }
 

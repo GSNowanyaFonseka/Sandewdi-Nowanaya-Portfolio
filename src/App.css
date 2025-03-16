@@ -32,12 +32,13 @@ body:after {
 }
 
 .main-container {
-    margin: 55px auto 0px auto;
+    margin: 0px auto;
     width: 80%;
-    height: 100vh;
+    height: 80vh;
     background-color: white;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    position: relative;
 }
 
 .title {
@@ -47,7 +48,6 @@ body:after {
     /* background-color: #21533b; */
     background: rgba(0, 0, 0, 0.124);
     width: 100%;
-    margin: 0 auto;
 }
 
 .scroll-top-button {
@@ -85,6 +85,8 @@ body:after {
     margin-bottom: 0;
 }
 
+
+
 /* Medium screens */
 @media (max-width: 992px) {
     .main-container {
@@ -95,10 +97,35 @@ body:after {
         font-size: 16px;
         line-height: 22px;
     }
+
+    #header-section,
+    #about,
+    #education,
+    #skills,
+    #projects,
+    #contact {
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 }
 
 /* Small tablets */
 @media (max-width: 768px) {
+
+    #header-section,
+    #about,
+    #education,
+    #skills,
+    #projects,
+    #contact {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
     .main-container {
         width: 95%;
     }
@@ -141,6 +168,7 @@ body:after {
 @media (max-height: 600px) {
     .main-container {
         width: 90%;
+        height: 80vh;
     }
     
     body {
@@ -153,6 +181,31 @@ body:after {
 @media (orientation: landscape) and (max-height: 500px) {
     .main-container {
         width: 90%;
+        height: 80vh;
+    }
+    
+    body {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 400px) {
+    .main-container {
+        width: 90%;
+        height: 80vh;
+    }
+    
+    body {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 300px) {
+    .main-container {
+        width: 90%;
+        height: 80vh;
     }
     
     body {
