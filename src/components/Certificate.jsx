@@ -18,6 +18,7 @@ import JavaScriptLanguage from '../assets/Learning JavaScript Language.png'
 import XMLLearning from '../assets/XML Essential Training.png'
 import TableauCertificate from '../assets/Tableau-certificate.png'
 import mysql from '../assets/MYSQL.png'
+import hultprize from '../assets/HULTPRIZE.jpg'
 
 
 
@@ -29,6 +30,16 @@ const Certificate = () => {
             <h1 className="title">Certifications</h1>
             <div className="timeline-section">
                 <div className="timeline-items">
+                    <div className="timeline-item">
+                        <div className="timeline-dot"><img src={IIT}/></div>
+                        <div className="timeline-date">2025</div>
+                        <div className="timeline-content">
+                            <h3>HULT PRIZE</h3>
+                            <p>Informatics Institute of Technology</p>
+                            <img src={hultprize} alt="certificate"/> 
+                        </div>
+                    </div>
+
                     <div className="timeline-item">
                         <div className="timeline-dot"><img src={IIT}/></div>
                         <div className="timeline-date">2024</div>
