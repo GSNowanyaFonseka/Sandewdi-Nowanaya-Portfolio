@@ -11,6 +11,7 @@ import ticketingSystem from '../assets/ticketingSystem.png';
 import ticketingmanagement from '../assets/plane-ticketing-management.png';
 import studentgradetracker from '../assets/student-grade-tracker.png';
 import progressionoutcome from '../assets/progression-outcome.png';
+import productstore from '../assets/product-store.png';
 import {ExternalLink, Github} from 'lucide-react';
 
 const Projects = () => {
@@ -19,7 +20,32 @@ const Projects = () => {
     <section id="projects">
             <h1 className="title">Projects</h1>
             <div className="project-container">
-            <div className="project">
+                <div className="project">
+                    <img src={productstore} alt="Project Image"/>
+                    <div className="project-content">
+                        <h1>Product Store Web Application</h1>
+                        <p>Product-Store Web Application using the MERN stack (MongoDB, Express.js, React, Node.js). This application is designed to streamline managing products, enhancing the user experience with 
+                            an intuitive interface and robust functionalities. 
+                        </p>
+                        <div className="project-buttons">
+                        <a href="https://product-store-pc5i.onrender.com/" className="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                            <p>Live Demo</p>
+                        </a>
+                        <a href="https://github.com/GSNowanyaFonseka/Sandewdi-Portfolio" className="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            </svg>
+                            <p>GitHub</p>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+                <div className="project">
                     <img src={Spacefix} alt="Project Image"/>
                     <div className="project-content">
                         <h1>Spacefix</h1>
@@ -52,7 +78,7 @@ const Projects = () => {
                             The project features a moders UI with real-time messanging, dynamic response generation, and multimedia support allowing users to upload and share images.
                         </p>
                         <div className="project-buttons">
-                        <a href="https://sandewdi-portfolio.vercel.app/" className="button">
+                        <a href="file:///C:/Users/Hp/Desktop/AI-Chatbot/AI-Chatbot/index.html" className="button">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                                 <polyline points="15 3 21 3 21 9" />
@@ -60,7 +86,7 @@ const Projects = () => {
                             </svg>
                             <p>Live Demo</p>
                         </a>
-                        <a href="https://github.com/GSNowanyaFonseka/Sandewdi-Portfolio" className="button">
+                        <a href="file:///C:/Users/Hp/Desktop/AI-Chatbot/AI-Chatbot/index.html" className="button">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
                             </svg>
