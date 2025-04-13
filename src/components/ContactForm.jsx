@@ -18,7 +18,7 @@ const Contact = () => {
                             <p><i className="fa-solid fa-square-phone"></i>+94 710783342</p>
                         </div>
                     </div>
-                    <a href="../assets/Sandewdi Nowanya CV.pdf" download className="button">Download CV</a>
+                    <a href="assets/Sandewdi Nowanya CV.pdf" download className="button">Download CV</a>
                 </div>
                 <div className="submit-form">
                     <h4 className="third-text text">Contact Us</h4>
