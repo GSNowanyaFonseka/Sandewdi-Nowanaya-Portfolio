@@ -58,20 +58,21 @@ const About = () => {
         <div className="text-content">
           <p className="about-text animated-text">
             I am Sandewdi Nowanya, a passionate and 
-            dedicated Computer Science student with a strong interest in web development and databases. 
-            Currently pursuing my degree at University of Westminster.
-            My academic journey has equipped me with a solid foundation in various areas, including object-oriented programming (OOP)
-            concepts, web development, database management systems, algorithms, and server-side programming.
+            dedicated Computer Science student with a strong interest in web development, 
+            data analysis, and artificial intelligence. I enjoy turning ideas into real-world applications, and I’m passionate about building 
+            solutions that are both innovative and practical.
           </p>
           <p className="about-text animated-text">
-            In addition to my technical skills, I have pursued courses and earned certificates in web development, data visualization,
-            utilizing tools such as PowerBI and Tableau. These courses and projects have sharpened my ability to transform complex data into 
-            insightful visualizations, enhancing decision-making processes.
+          Over time, I’ve worked on a variety of projects—from developing full-stack web applications using the MERN stack and Spring Boot, 
+          to analyzing real-world datasets using Python, SQL, and Power BI. These experiences have helped me strengthen my skills in both front-end and back-end development, 
+          as well as data processing and visualization.
           </p>
           <p className="about-text animated-text">
-            Beyond my technical expertise, I have developed strong soft skills such as teamwork, communication, problem-solving, and adaptability. 
-            These skills have been honed through various group projects and collaborative efforts, ensuring I can effectively contribute to
-            and excels in any team environment.
+          I’m proficient in Java, Python, PHP, SQL, React.js, Node.js, and Spring Boot, and I bring strong problem-solving, teamwork, and communication skills to every project 
+          I take on. I'm constantly learning and adapting, with a drive to grow both personally and professionally in the tech industry.
+          </p>
+          <p className="about-text animated-text">
+          Let’s build something impactful together !
           </p>
         </div>
       </div>
