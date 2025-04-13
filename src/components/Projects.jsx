@@ -12,7 +12,6 @@ import ticketingmanagement from '../assets/plane-ticketing-management.png';
 import studentgradetracker from '../assets/student-grade-tracker.png';
 import progressionoutcome from '../assets/progression-outcome.png';
 import productstore from '../assets/product-store.png';
-import homteq from '../assets/homteq.png';
 import {ExternalLink, Github} from 'lucide-react';
 
 const Projects = () => {
@@ -72,14 +71,14 @@ const Projects = () => {
                     </div>
                 </div>
                 <div className="project">
-                    <img src={hometeq} alt="Project Image"/>
+                    <img src={Spacefix} alt="Project Image"/>
                     <div className="project-content">
-                        <h1>Homteq</h1>
-                        <p>Developed using PHP as the client-side scripting language this project efficiently 
-                            connects with MySQL databases to ensure secure and dynamic data handling.
+                        <h1>Spacefix</h1>
+                        <p>Developing a classroom booking and management app to optimize university space utilization. The app provides
+                            real-time space availability, reduces overcrowding and enhances student aceess to study spaces. 
                         </p>
                         <div className="project-buttons">
-                        <a href="#" className="button">
+                        <a href="https://www.spacefix.lk/" className="button">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                                 <polyline points="15 3 21 3 21 9" />
