@@ -160,8 +160,27 @@
 /* Extra large screens */
 @media screen and (min-width: 1601px) {
     .about-container {
-        max-width: 1400px;
         padding: 0 50px;
+    }
+
+        /* About Text Styling */
+    #about .about-text {
+        flex: 1;
+        color: black;
+        font-size: 22px;
+        line-height: 1.6;
+        margin: auto 40px;
+        padding: 0;
+        text-align: justify;
+    }
+
+    /* About Image Styling */
+    #about img {
+        max-width: 300px;
+        margin: 50px;
+        height: auto;
+        border-radius: 10px;
+        padding: 0;
     }
     
     #about img {
