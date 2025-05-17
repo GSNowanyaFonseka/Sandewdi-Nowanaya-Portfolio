@@ -13,7 +13,7 @@ import studentgradetracker from '../assets/student-grade-tracker.png';
 import progressionoutcome from '../assets/progression-outcome.png';
 import productstore from '../assets/product-store.png';
 import homteq from '../assets/homteq.png';
-import bookstoreAPI from '../assets/bookstoreAPI.png';
+import bookstoreAPI from '../assets/BookstoreAPI.png';
 import networkflow from '../assets/Networkflow.png';
 import {ExternalLink, Github} from 'lucide-react';
 
