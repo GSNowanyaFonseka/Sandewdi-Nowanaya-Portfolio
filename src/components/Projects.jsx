@@ -13,9 +13,13 @@ import studentgradetracker from '../assets/student-grade-tracker.png';
 import progressionoutcome from '../assets/progression-outcome.png';
 import productstore from '../assets/product-store.png';
 import homteq from '../assets/homteq.png';
+import bookstoreAPI from '../assets/bookstoreAPI.png';
+import networkflow from '../assets/Networkflow.png';
 import {ExternalLink, Github} from 'lucide-react';
 
+
 const Projects = () => {
+
   return (
     
     <section id="projects">
@@ -144,6 +148,30 @@ const Projects = () => {
                             </div>
                         </div> 
                 </div>  
+
+                <div className="project">
+                        <img src={networkflow} alt="Project Image"/>
+                        <div className="project-content">
+                            <h1>Network Flow Optimization</h1>
+                            <p>Implemented in Java to model flow networks and compute the maximum flow using capacity and conservation constraints. Includes a custom parser for input files, graph data structure design, and algorithm to analyze flow efficiency from source to sink.</p>
+                            <div className="project-buttons">
+                            <a href="#" className="button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                    <polyline points="15 3 21 3 21 9" />
+                                    <line x1="10" y1="14" x2="21" y2="3" />
+                                </svg>
+                                <p className="button-content">Live Demo</p>
+                            </a>
+                            <a href="https://github.com/GSNowanyaFonseka/Network-Flow-Algorithm" className="button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                </svg>
+                                <p>GitHub</p>
+                            </a>
+                            </div>
+                        </div> 
+                </div>  
     
                 <div className="project">
                     <img src={TableauDashboard} alt="Project Image"/>
@@ -243,30 +271,6 @@ const Projects = () => {
                 </div>
     
                 <div className="project">
-                    <img src={ticketingSystem} alt="Project Image"/>
-                    <div className="project-content">
-                        <h1>Real-Time Event Ticketing System</h1>
-                        <p>The project is a comprehensive ticket management system utilizing React and Spring Boot for real-time ticket handling and advanced multithreading and synchronization techniques.</p>
-                        <div className="project-buttons">
-                        <a href="https://sandewdi-portfolio.vercel.app/" className="button">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                                <polyline points="15 3 21 3 21 9" />
-                                <line x1="10" y1="14" x2="21" y2="3" />
-                            </svg>
-                            <p>Live Demo</p>
-                        </a>
-                        <a href="https://github.com/GSNowanyaFonseka/Sandewdi-Portfolio" className="button">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-                            </svg>
-                            <p>GitHub</p>
-                        </a>
-                        </div>
-                    </div>
-                </div>
-    
-                <div className="project">
                     <img src={ticketingmanagement} alt="Project Image"/>
                     <div className="project-content">
                         <h1>Plane Management System</h1>
@@ -289,6 +293,32 @@ const Projects = () => {
                         </div>
                     </div>
                 </div>
+
+                <div className="project">
+                    <img src={bookstoreAPI} alt="Project Image"/>
+                    <div className="project-content">
+                        <h1>Bookstore RESTful APIs</h1>
+                        <p>Bookstore RESTful API developed using JAX-RS (Jersey) to manage books, authors, customers, carts, and orders. Implements core RESTful principles with JSON data handling and custom exception management. Data is stored in-memory and the API was tested using Postman.</p>
+                        <div className="project-buttons">
+                        <a href="https://sandewdi-portfolio.vercel.app/" className="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                            <p>Live Demo</p>
+                        </a>
+                        <a href="https://github.com/GSNowanyaFonseka/BookstoreWebApplication" className="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            </svg>
+                            <p>GitHub</p>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+
+                
     
                 <div className="project">
                     <img src={studentgradetracker} alt="Project Image"/>
